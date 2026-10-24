@@ -1,3 +1,56 @@
+# 提示词大师（Prompt Master）
+
+> 篝火出品 · 收录于篝火 App 应用区。本仓库 fork 自 [nidhinjs/prompt-master](https://github.com/nidhinjs/prompt-master)，版权归原作者，按 MIT 许可证分发。
+
+一个帮你给各种 AI 工具写“一次就对”的提示词的技能：你说想让 AI 做什么，它按目标工具的特点写好一段可直接复制的提示词。
+
+## 能做什么
+
+- 自动判断目标工具（Claude、ChatGPT、Gemini、Cursor、Claude Code、Midjourney、Stable Diffusion、Sora、Runway 等），按各自的写法出提示词。
+- 把你的需求拆成 9 个维度（任务、输入、输出、限制、背景、受众、记忆、成功标准、示例），缺关键信息时最多问你 3 个问题。
+- 帮你修改、优化已有的烂提示词，或把一个提示词改写成适合另一个工具的版本。
+- 输出前做一遍“字数瘦身”，去掉不改变结果的废话，并附一句策略说明。
+- 支持图像、视频、编程助手、自动化工具（如 Zapier、Make）等多类场景。
+
+## 怎么安装（Claude Code）
+
+压缩包 `prompt-master-campfire.zip` 解压后的结构：
+
+```
+skills/
+  prompt-master/   （内含 SKILL.md、references）
+README.md
+LICENSE
+```
+
+1. 到本仓库 [Releases](https://github.com/campfire-code/prompt-master/releases/latest) 下载 `prompt-master-campfire.zip` 并解压。
+2. 把 `skills/prompt-master` 整个文件夹复制到 `~/.claude/skills/`（没有就新建）。
+   - macOS / Linux：`mkdir -p ~/.claude/skills && cp -R skills/prompt-master ~/.claude/skills/`
+   - Windows：复制到 `C:\Users\你的用户名\.claude\skills\`
+3. 确认 `~/.claude/skills/prompt-master/SKILL.md` 存在，重启 Claude Code。
+
+上游另提供 claude.ai 网页版的安装方式：把仓库打成 ZIP，在 claude.ai 的“自定义 → 技能 → 上传技能”里上传，详见下方上游原文。
+
+## 怎么用
+
+只有当你明确要求“写/改/适配一个提示词”时才会触发，也可以用 `/prompt-master` 手动调用。示例说法：
+
+- “帮我写一个给 Cursor 的提示词，重构登录模块”
+- “这是我写的 GPT-4o 提示词，帮我改好：（粘贴）”
+- “生成一个 Midjourney 提示词：夜晚的赛博朋克城市”
+
+## 前置条件
+
+无。不需要 Python、Node 或密钥。
+
+## 和上游的区别
+
+只加了本段中文说明与打包，代码未改。
+
+---
+
+以下为上游原始说明（原文未改动）：
+
 ![](https://i.postimg.cc/kG03s7tk/prompt-banner.png)
 
 <br/>
